@@ -259,7 +259,7 @@
 <h1 id="二、物理模型"><a href="#二、物理模型" class="headerlink" title="二、物理模型"></a>二、物理模型</h1><h2 id="几何尺寸"><a href="#几何尺寸" class="headerlink" title="几何尺寸"></a>几何尺寸</h2><ul>
 <li>​<strong>结构</strong>：长条形墙体截面</li>
 <li>​<strong>外层</strong>：大理石（厚度 $d_1 &#x3D; 20\ \text{mm}$）</li>
-<li>​<strong>内层</strong>：苯基聚合保暖层（厚度 $d_2 &#x3D; 100\ \text{mm}$）<br><img src="/source%5Cattach%5Cimage.png" alt="图1"></li>
+<li>​<strong>内层</strong>：苯基聚合保暖层（厚度 $d_2 &#x3D; 100\ \text{mm}$）</li>
 </ul>
 <h2 id="边界条件"><a href="#边界条件" class="headerlink" title="边界条件"></a>边界条件</h2><table>
 <thead>
@@ -286,7 +286,6 @@
 </tr>
 </tbody></table>
 <hr>
-<p><img src="https://hunyuan-plugin-1258344706.cos.ap-nanjing.myqcloud.com/pdf_youtu/img/b6015a6c0239300bc583684d5d5a8ae0-i" alt="图2"></p>
 <h2 id="材料参数"><a href="#材料参数" class="headerlink" title="材料参数"></a>材料参数</h2><ul>
 <li>​<strong>大理石</strong><br>导热系数 $\lambda_1 &#x3D; 3.0$ ${W&#x2F;(m·K)}$  </li>
 <li>​<strong>苯基聚合层</strong><br>导热系数 $\lambda_2 &#x3D; 0.29$ ${W&#x2F;(m·K)}$</li>
@@ -295,11 +294,10 @@
 <li>​<strong>材料性能恒定</strong>：忽略老化、湿度渗透、热循环导致的性能退化。</li>
 <li>​<strong>完美界面接触</strong>：假设层间无空隙或热桥。</li>
 <li>​<strong>稳态传热限制</strong>：仅分析稳态条件，忽略瞬态响应。</li>
-<li>​<strong>均匀风速分布</strong>：假设空气流速在表面均匀分布。<br><img src="https://hunyuan-plugin-1258344706.cos.ap-nanjing.myqcloud.com/pdf_youtu/img/b6015a6c0239300bc583684d5d5a8ae0-i" alt="图7仿真结果"><br><img src="https://hunyuan-plugin-1258344706.cos.ap-nanjing.myqcloud.com/pdf_youtu/img/b6015a6c0239300bc583684d5d5a8ae0-i" alt="图7仿真结果"></li>
+<li>​<strong>均匀风速分布</strong>：假设空气流速在表面均匀分布。</li>
 </ol>
 <hr>
-<h1 id="三、传热过程分析"><a href="#三、传热过程分析" class="headerlink" title="三、传热过程分析"></a>三、传热过程分析</h1><p><img src="https://hunyuan-plugin-1258344706.cos.ap-nanjing.myqcloud.com/pdf_youtu/img/b6015a6c0239300bc583684d5d5a8ae0-i" alt="图7仿真结果"></p>
-<h2 id="热阻计算"><a href="#热阻计算" class="headerlink" title="热阻计算"></a>热阻计算</h2><ul>
+<h1 id="三、传热过程分析"><a href="#三、传热过程分析" class="headerlink" title="三、传热过程分析"></a>三、传热过程分析</h1><h2 id="热阻计算"><a href="#热阻计算" class="headerlink" title="热阻计算"></a>热阻计算</h2><ul>
 <li>​<strong>内层对流热阻</strong>：<br>$$ R_{\text{内}} &#x3D; \frac{1}{h_i} \approx 0.333\ \text{m}^2\cdot^\circ\text{C&#x2F;W} $$</li>
 <li>​<strong>苯基聚合物传导热阻</strong>：<br>$$ R_2 &#x3D; \frac{d_2}{\lambda_2} \approx 0.345\ \text{m}^2\cdot^\circ\text{C&#x2F;W} $$</li>
 <li>​<strong>大理石传导热阻</strong>：<br>$$ R_1 &#x3D; \frac{d_1}{\lambda_1} \approx 0.0067\ \text{m}^2\cdot^\circ\text{C&#x2F;W} $$</li>
@@ -308,17 +306,16 @@
 <p><strong>总热阻</strong>：<br>$$ R_{\text{总}} &#x3D; R_{\text{内}} + R_2 + R_1 + R_{\text{外}} \approx 0.785\ \text{m}^2\cdot^\circ\text{C&#x2F;W} $$</p>
 <h2 id="热流密度公式"><a href="#热流密度公式" class="headerlink" title="热流密度公式"></a>热流密度公式</h2><p>$$ q &#x3D; \frac{\Delta T}{R_{\text{总}}} &#x3D; \frac{22 - 0}{0.785} \approx 28.02\ \text{W&#x2F;m}^2 $$</p>
 <hr>
-<h2 id="仿真结果"><a href="#仿真结果" class="headerlink" title="仿真结果"></a>仿真结果</h2><p><img src="https://hunyuan-plugin-1258344706.cos.ap-nanjing.myqcloud.com/pdf_youtu/img/b6015a6c0239300bc583684d5d5a8ae0-i" alt="图7仿真结果"></p>
-<h2 id="温度分布"><a href="#温度分布" class="headerlink" title="温度分布"></a>温度分布</h2><ul>
+<h2 id="仿真结果"><a href="#仿真结果" class="headerlink" title="仿真结果"></a>仿真结果</h2><h2 id="温度分布"><a href="#温度分布" class="headerlink" title="温度分布"></a>温度分布</h2><ul>
 <li>​<strong>高温区（红色）​</strong>：室内侧表面温度 $22^\circ\text{C}$，与内环境一致，表明保温层有效阻隔热流失。</li>
 <li>​<strong>低温区（灰色）​</strong>：外层表面温度趋近 $0^\circ\text{C}$，内外实际温差因材料热阻显著降低。</li>
 </ul>
 <h1 id="四、结论"><a href="#四、结论" class="headerlink" title="四、结论"></a>四、结论</h1><p>通过对相关公式及关键参数的整理与分析，综合考虑影响墙体表面对流换热系数的因素，可以得出以下结论：</p>
 <ol>
-<li>墙体导热系数（λ）和墙体厚度（s 或 δ）的增加均会导致墙体散热量减小。</li>
-<li>外部环境空气流速（V）的增加会提升墙体散热量，尤其在寒冷条件下，但目前尚无法给出定量公式进行分析，因为不同场景下该因素对散热量的影响存在差异。</li>
-<li>对流换热系数（h）的增加会显著提高墙体散热量，这主要取决于墙体表面特性和空气性质。</li>
-<li>聚苯乙烯泡沫塑料保温材料的导热率较低。根据《10CJ16：挤塑聚苯乙烯泡沫塑料板保温系统建筑构造》中的资料，EPS（模塑聚苯乙烯泡沫塑料）的导热系数为0.041 W&#x2F;(m·K)，而XPS（挤塑聚苯乙烯泡沫塑料）的导热系数更低，仅为0.030 W&#x2F;(m·K)，远优于传统砖墙（导热系数为0.58 W&#x2F;(m·K)）。<br>基于以上分析结果，我们可以优化建筑墙体的隔热性能，通过选择合适的材料、厚度和对流措施，提高能源效率并确保室内舒适度。在寒冷气候下，特别需要注意增加对流传热，例如加快内外空气对流，以减少能源损失。此外，从保温材料的研究现状来看，影响保温材料保温性能的三大因素为耐火性能、导热率和吸水率。在实际应用中，应综合考虑这些因素，选择最适合的保温材料。</li>
+<li>墙体导热系数$（λ）$和墙体厚度$（s $或$ δ）$的增加均会导致墙体散热量减小。</li>
+<li>外部环境空气流速$（V）$的增加会提升墙体散热量，尤其在寒冷条件下，但目前尚无法给出定量公式进行分析，因为不同场景下该因素对散热量的影响存在差异。</li>
+<li>对流换热系数$（h）$的增加会显著提高墙体散热量，这主要取决于墙体表面特性和空气性质。</li>
+<li>聚苯乙烯泡沫塑料保温材料的导热率较低。根据《10CJ16：挤塑聚苯乙烯泡沫塑料板保温系统建筑构造》中的资料，$EPS$（模塑聚苯乙烯泡沫塑料）的导热系数为$0.041 W&#x2F;(m·K)$，而$XPS$（挤塑聚苯乙烯泡沫塑料）的导热系数更低，仅为$0.030 W&#x2F;(m·K)$，远优于传统砖墙（导热系数为$0.58 W&#x2F;(m·K)$）。<br>基于以上分析结果，我们可以优化建筑墙体的隔热性能，通过选择合适的材料、厚度和对流措施，提高能源效率并确保室内舒适度。在寒冷气候下，特别需要注意增加对流传热，例如加快内外空气对流，以减少能源损失。此外，从保温材料的研究现状来看，影响保温材料保温性能的三大因素为耐火性能、导热率和吸水率。在实际应用中，应综合考虑这些因素，选择最适合的保温材料。</li>
 </ol>
 
         </div>
