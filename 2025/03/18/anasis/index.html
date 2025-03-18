@@ -13,7 +13,7 @@
 
 
 
-<title>anasis | Roy Yan</title>
+<title>多层墙壁稳态热传导分析 | Roy Yan</title>
 
 
 
@@ -40,6 +40,45 @@
 
     
     
+        
+            <!-- MathJax配置，可通过单美元符号书写行内公式等 -->
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+    "HTML-CSS": {
+        preferredFont: "TeX",
+        availableFonts: ["STIX","TeX"],
+        linebreaks: { automatic:true },
+        EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50)
+    },
+    tex2jax: {
+        inlineMath: [ ["$", "$"], ["\\(","\\)"] ],
+        processEscapes: true,
+        ignoreClass: "tex2jax_ignore|dno",
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    },
+    TeX: {
+        equationNumbers: { autoNumber: "AMS" },
+        noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } },
+        Macros: { href: "{}" }
+    },
+    messageStyle: "none"
+    });
+</script>
+<!-- 给MathJax元素添加has-jax class -->
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+<!-- 通过连接CDN加载MathJax的js代码 -->
+<script type="text/javascript" async
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+
         
     
 
@@ -196,7 +235,7 @@
     
     <article class="post-wrap">
         <header class="post-header">
-            <h1 class="post-title">anasis</h1>
+            <h1 class="post-title">多层墙壁稳态热传导分析</h1>
             
                 <div class="post-meta">
                     
@@ -214,10 +253,10 @@
         </header>
 
         <div class="post-content">
-            <h1 id="背景介绍"><a href="#背景介绍" class="headerlink" title="背景介绍"></a>背景介绍</h1><p>随着城市化进程加速，建筑围护结构的热损失已成为能源消耗的核心问题。基于此，本研究提出一种新型复合墙体结构「大理石外层+苯基有机聚合物保温层」，旨在通过优化材料组合与动态热响应，提升建筑围护结构的节能潜力。本文聚焦于稳态传热条件下空气流速对墙体散热量的影响机理，结合理论模型与数值模拟。</p>
+            <h1 id="一、背景介绍"><a href="#一、背景介绍" class="headerlink" title="一、背景介绍"></a>一、背景介绍</h1><p>随着城市化进程加速，建筑围护结构的热损失已成为能源消耗的核心问题。基于此，本研究提出一种新型复合墙体结构「大理石外层+苯基有机聚合物保温层」，旨在通过优化材料组合与动态热响应，提升建筑围护结构的节能潜力。本文聚焦于稳态传热条件下空气流速对墙体散热量的影响机理，结合理论模型与数值模拟。</p>
 <p><strong>稳态传热</strong>是指传热系统中各点的温度仅随位置变化而不随时间改变的传热过程。对于这一过程的分析有助于评估墙体在不同环境条件下的隔热性能，其中一个关键参数是环境空气流速。本研究旨在分析单位面积上典型建筑墙体的稳态散热过程，特别关注墙体散热量随环境空气流速的变化关系。</p>
 <hr>
-<h1 id="物理模型"><a href="#物理模型" class="headerlink" title="物理模型"></a>物理模型</h1><h2 id="几何尺寸"><a href="#几何尺寸" class="headerlink" title="几何尺寸"></a>几何尺寸</h2><ul>
+<h1 id="二、物理模型"><a href="#二、物理模型" class="headerlink" title="二、物理模型"></a>二、物理模型</h1><h2 id="几何尺寸"><a href="#几何尺寸" class="headerlink" title="几何尺寸"></a>几何尺寸</h2><ul>
 <li>​<strong>结构</strong>：长条形墙体截面</li>
 <li>​<strong>外层</strong>：大理石（厚度 $d_1 &#x3D; 20\ \text{mm}$）</li>
 <li>​<strong>内层</strong>：苯基聚合保暖层（厚度 $d_2 &#x3D; 100\ \text{mm}$）<br><img src="/source%5Cattach%5Cimage.png" alt="图1"></li>
@@ -259,7 +298,7 @@
 <li>​<strong>均匀风速分布</strong>：假设空气流速在表面均匀分布。<br><img src="https://hunyuan-plugin-1258344706.cos.ap-nanjing.myqcloud.com/pdf_youtu/img/b6015a6c0239300bc583684d5d5a8ae0-i" alt="图7仿真结果"><br><img src="https://hunyuan-plugin-1258344706.cos.ap-nanjing.myqcloud.com/pdf_youtu/img/b6015a6c0239300bc583684d5d5a8ae0-i" alt="图7仿真结果"></li>
 </ol>
 <hr>
-<h1 id="传热过程分析"><a href="#传热过程分析" class="headerlink" title="传热过程分析"></a>传热过程分析</h1><p><img src="https://hunyuan-plugin-1258344706.cos.ap-nanjing.myqcloud.com/pdf_youtu/img/b6015a6c0239300bc583684d5d5a8ae0-i" alt="图7仿真结果"></p>
+<h1 id="三、传热过程分析"><a href="#三、传热过程分析" class="headerlink" title="三、传热过程分析"></a>三、传热过程分析</h1><p><img src="https://hunyuan-plugin-1258344706.cos.ap-nanjing.myqcloud.com/pdf_youtu/img/b6015a6c0239300bc583684d5d5a8ae0-i" alt="图7仿真结果"></p>
 <h2 id="热阻计算"><a href="#热阻计算" class="headerlink" title="热阻计算"></a>热阻计算</h2><ul>
 <li>​<strong>内层对流热阻</strong>：<br>$$ R_{\text{内}} &#x3D; \frac{1}{h_i} \approx 0.333\ \text{m}^2\cdot^\circ\text{C&#x2F;W} $$</li>
 <li>​<strong>苯基聚合物传导热阻</strong>：<br>$$ R_2 &#x3D; \frac{d_2}{\lambda_2} \approx 0.345\ \text{m}^2\cdot^\circ\text{C&#x2F;W} $$</li>
@@ -318,6 +357,10 @@
                 <span>Tag(s):</span>
                 <span class="tag">
                     
+                    
+                        <a href="/tags/%E5%B7%A5%E7%A8%8B%E8%AE%BE%E8%AE%A1/"># 工程设计</a>
+                    
+                        
                 </span>
             </div>
             <div>
