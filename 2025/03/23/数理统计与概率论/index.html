@@ -13,7 +13,7 @@
 
 
 
-<title>help | 烟浊同学</title>
+<title>数理统计与概率论 | 烟浊同学</title>
 
 
 
@@ -40,6 +40,45 @@
 
     
     
+        
+            <!-- MathJax配置，可通过单美元符号书写行内公式等 -->
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+    "HTML-CSS": {
+        preferredFont: "TeX",
+        availableFonts: ["STIX","TeX"],
+        linebreaks: { automatic:true },
+        EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50)
+    },
+    tex2jax: {
+        inlineMath: [ ["$", "$"], ["\\(","\\)"] ],
+        processEscapes: true,
+        ignoreClass: "tex2jax_ignore|dno",
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    },
+    TeX: {
+        equationNumbers: { autoNumber: "AMS" },
+        noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } },
+        Macros: { href: "{}" }
+    },
+    messageStyle: "none"
+    });
+</script>
+<!-- 给MathJax元素添加has-jax class -->
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+<!-- 通过连接CDN加载MathJax的js代码 -->
+<script type="text/javascript" async
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+
         
     
 
@@ -190,7 +229,7 @@
     
     <article class="post-wrap">
         <header class="post-header">
-            <h1 class="post-title">help</h1>
+            <h1 class="post-title">数理统计与概率论</h1>
             
                 <div class="post-meta">
                     
@@ -215,7 +254,10 @@
 <h1 id="3-2-边际分布与随机变量的独立性"><a href="#3-2-边际分布与随机变量的独立性" class="headerlink" title="3.2 边际分布与随机变量的独立性"></a>3.2 边际分布与随机变量的独立性</h1><p>其实就是二维随机变量函数$F(x,y)$令$y\to \infty$且${Y&lt;\infty}$为必然事件<br>$$<br>\lim_{ y \to \infty }F(x,y)&#x3D;P(X\leq x,Y&lt;\infty)&#x3D;P(X\leq x)<br>$$<br>容易得到联合分布函数的变量的边际函数<br>$$<br>F_{X}(x)&#x3D;F(x,\infty)<br>$$<br>$$<br>F_{Y}(y)&#x3D;F(\infty,y)<br>$$<br>更高维度只需要令其他随机变量趋近于必然事件即可得到对应的边际分布</p>
 <h2 id="3-2-3-边际密度函数"><a href="#3-2-3-边际密度函数" class="headerlink" title="3.2.3 边际密度函数"></a>3.2.3 边际密度函数</h2><p>$$<br>F_{X}(x)&#x3D;F(x,\infty)&#x3D;\int_{-\infty}^x\left( \int_{-\infty}^\infty p(u,v)dv \right)du&#x3D;\int_{-\infty}^xP_{X}(u)du<br>$$<br>$$<br>F_{Y}(y)&#x3D;F(\infty,y)&#x3D;\int_{-\infty}^y\left( \int_{-\infty}^\infty p(u,v)du\right)dv&#x3D;\int_{-\infty}^yP_{Y}(v)v<br>$$<br>其中$p_{X}(x)$和$pY(y)$<br>$$<br>p_{X}(x)&#x3D;\int_{-\infty}^\infty p(x,y)dy<br>$$<br>$$<br>p_{Y}(y)&#x3D;\int_{-\infty}^\infty p(x,y)dx<br>$$<br>可以通过边际密度函数的乘积是否等于联合密度函数判断变量之间是否独立$p(x,y)?&#x3D; p_{X}(x)p_{Y}(y)$</p>
 <hr>
-<p>例题:<br>$$<br>p(x,y)&#x3D;6xy^2,0&lt;x&lt;1,0&lt;y&lt;1<br>$$<br>$$<br>p_{X}(x)&#x3D;\int_{0}^16xy^2dy&#x3D;6x\left( \frac{1}{3}y^3 \right)|<em>{0}^{1}&#x3D;2x<br>$$<br>$$<br>p</em>{Y}(y)&#x3D;y^2(3x^2)|<em>{0}^1&#x3D;3y^2$$<br>$$<br>p</em>{X}(x)p_{Y}(y)&#x3D;p(x,y)<br>$$</p>
+<blockquote>
+<p>[!NOTE] 例题</p>
+<h2 id="p-x-y-6xy-2-0"><a href="#p-x-y-6xy-2-0" class="headerlink" title="$$p(x,y)&#x3D;6xy^2,0&lt;x&lt;1,0&lt;y&lt;1$$"></a>$$<br>p(x,y)&#x3D;6xy^2,0&lt;x&lt;1,0&lt;y&lt;1<br>$$</h2><p>$$<br>p_{X}(x)&#x3D;\int_{0}^16xy^2dy&#x3D;6x\left( \frac{1}{3}y^3 \right)|<em>{0}^{1}&#x3D;2x<br>$$<br>$$<br>p</em>{Y}(y)&#x3D;y^2(3x^2)|<em>{0}^1&#x3D;3y^2$$<br>$$<br>p</em>{X}(x)p_{Y}(y)&#x3D;p(x,y)<br>$$</p>
+</blockquote>
 
         </div>
 
@@ -239,6 +281,8 @@
                 <span class="tag">
                     
                     
+                        <a href="/tags/%E6%95%B0%E5%AD%A6/"># 数学</a>
+                    
                         <a href="/tags/%E5%9B%9E%E9%A1%BE%E5%A4%8D%E4%B9%A0/"># 回顾复习</a>
                     
                         
@@ -255,7 +299,7 @@
                 <a class="prev" rel="prev" href="/2025/03/25/%E6%96%AF%E7%89%B9%E6%9E%97%E4%BB%BF%E7%9C%9F2/">斯特林仿真2</a>
             
             
-            <a class="next" rel="next" href="/2025/03/23/%E6%96%AF%E7%89%B9%E6%9E%97%E4%BB%BF%E7%9C%9F1/">斯特林仿真</a>
+            <a class="next" rel="next" href="/2025/03/18/%E5%A2%99%E5%A3%81%E7%A8%B3%E6%80%81%E7%83%AD%E4%BC%A0%E5%AF%BC/">多层墙壁稳态热传导分析</a>
             
         </section>
 
