@@ -253,9 +253,13 @@
 <h2 id="3-2-3-边际密度函数"><a href="#3-2-3-边际密度函数" class="headerlink" title="3.2.3 边际密度函数"></a>3.2.3 边际密度函数</h2><p>$$<br>F_{X}(x)&#x3D;F(x,\infty)&#x3D;\int_{-\infty}^x\left( \int_{-\infty}^\infty p(u,v)dv \right)du&#x3D;\int_{-\infty}^xP_{X}(u)du<br>$$<br>$$<br>F_{Y}(y)&#x3D;F(\infty,y)&#x3D;\int_{-\infty}^y\left( \int_{-\infty}^\infty p(u,v)du\right)dv&#x3D;\int_{-\infty}^yP_{Y}(v)v<br>$$<br>其中$p_{X}(x)$和$pY(y)$<br>$$<br>p_{X}(x)&#x3D;\int_{-\infty}^\infty p(x,y)dy<br>$$<br>$$<br>p_{Y}(y)&#x3D;\int_{-\infty}^\infty p(x,y)dx<br>$$<br>可以通过边际密度函数的乘积是否等于联合密度函数判断变量之间是否独立$p(x,y)?&#x3D; p_{X}(x)p_{Y}(y)$</p>
 <hr>
 <blockquote>
-<p>[!NOTE]<br>$$<br>p(x,y)&#x3D;6xy^2,0&lt;x&lt;1,0&lt;y&lt;1<br>$$<br>$$<br>p_{X}(x)&#x3D;\int_{0}^16xy^2dy&#x3D;2x<br>$$<br>$$<br>p_{Y}(y)&#x3D;3y^2<br>$$<br>$$<br>p_{X}(x)p_{Y}(y)&#x3D;p(x,y)<br>$$<br>因此可以判断独立 </p>
+<p>[!NOTE] 例题<br>$$<br>p(x,y)&#x3D;6xy^2,0&lt;x&lt;1,0&lt;y&lt;1<br>$$<br>$$<br>p_{X}(x)&#x3D;\int_{0}^16xy^2dy&#x3D;2x<br>$$<br>$$<br>p_{Y}(y)&#x3D;3y^2<br>$$<br>$$<br>p_{X}(x)p_{Y}(y)&#x3D;p(x,y)<br>$$<br>因此可以判断独立 </p>
 </blockquote>
 <hr>
+<h1 id="3-3-多维随机变量函数的分布"><a href="#3-3-多维随机变量函数的分布" class="headerlink" title="3.3 多维随机变量函数的分布"></a>3.3 多维随机变量函数的分布</h1><p>设$X$与$Y$是两个相互独立的连续随机变量，其密度函数分别为$p_{X}(x),p_{Y}(y)$那么$Z&#x3D;X+Y$的密度函数为<br>$$<br>\begin{align}<br>p_{Z}(z)&amp;&#x3D;\int_{-\infty}^\infty p_{X}(z-y)p_{Y}(y)dy\<br>  &amp;&#x3D;\int_{-\infty}^\infty p_{X}(x)p_{Y}(z-x)dx<br>\end{align}<br>$$</p>
+<blockquote>
+<p>[!Success] 证明<br>$$<br>\begin{align}<br>F_{Z}(z)&amp;&#x3D;P(X+Y\leq z)&#x3D;\iint_{x+y\leq z}p_{X}(x)p_{Y}(y)dxdy \<br>&amp;&#x3D;\int_{-\infty}^\infty\left{ \int_{-\infty}^{(z-y)}p_{X}(x)dx \right}p_{Y}(y)dy \tag{此处积分面积转换}\<br>&amp;&#x3D;\int_{-\infty}^\infty \int_{-\infty}^zp_{X}(t-y)p_{Y}(y)dtdy \<br>&amp; &#x3D;\int_{-\infty}^z\left( \int_{-\infty}^\infty p_{X}(t-y)p_{Y}(y)dy \right)dt\<br>\end{align}<br>$$<br>由此可得$Z$的密度函数<br>$$p_{Z}(z)&#x3D;\int_{-\infty}^\infty p_{X}(z-y)p_{Y}(y)dy$$</p>
+</blockquote>
 
         </div>
 

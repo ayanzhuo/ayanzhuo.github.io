@@ -143,7 +143,19 @@
         </header>
 
         <div class="post-content">
-            
+            <blockquote>
+<p>[!NOTE]<br>$$y′′(t)+5y′(t)+6y(t)&#x3D;f(t)$$<br>经过拉普拉斯变换整理得<br>$$<br>\begin{align}<br>Y(s)&amp;&#x3D;\frac{F(s)+sy(0)+y′(0)+5y(0)​}{s^2+5s+6} \<br>&amp;&#x3D;\frac{F(s)}NaN+\frac{sy(0)+y′(0)+5y(0)​}{s^2+5s+6} \ \<br> &amp; &#x3D;Y_{zi}+Y_{si}<br>\end{align}<br>$$</p>
+<ul>
+<li>$Y(s)$是输出$y(t)$的拉普拉斯变换；</li>
+<li>$F(s)$是输入$f(t)$的拉普拉斯变换；</li>
+<li>$y(0$)和$y′(0)$是系统的初始条件;</li>
+</ul>
+</blockquote>
+<p>若输入$f(t)&#x3D;δ(t)$（单位冲激信号），且初始条件为零，$F(s)&#x3D;1$，则$Y(s)&#x3D;\frac{1}{s2+5s+6​}$，其逆变换为 $y(t)&#x3D;3(e^2t−e^3t)ε(t)$，即单位脉冲响应</p>
+<blockquote>
+<p>[!attention]<br>零输入响应仅由初始条件驱动，与输入无关。<br>​零状态响应需将初始条件置零后求解，仅由输入驱动。<br>系统函数 $H(s)$ 是传递函数的数学核心，与输入和初始条件无关.</p>
+</blockquote>
+
         </div>
 
         
