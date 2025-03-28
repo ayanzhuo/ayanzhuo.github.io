@@ -258,7 +258,7 @@
 <hr>
 <h1 id="3-3-多维随机变量函数的分布"><a href="#3-3-多维随机变量函数的分布" class="headerlink" title="3.3 多维随机变量函数的分布"></a>3.3 多维随机变量函数的分布</h1><p>设$X$与$Y$是两个相互独立的连续随机变量，其密度函数分别为$p_{X}(x),p_{Y}(y)$那么$Z&#x3D;X+Y$的密度函数为<br>$$<br>\begin{align}<br>p_{Z}(z)&amp;&#x3D;\int_{-\infty}^\infty p_{X}(z-y)p_{Y}(y)dy\<br>  &amp;&#x3D;\int_{-\infty}^\infty p_{X}(x)p_{Y}(z-x)dx<br>\end{align}<br>$$</p>
 <blockquote>
-<p>[!Success]证明<br>$$F_{Z}(z)&#x3D;P(X+Y\leq z)&#x3D;\iint_{x+y\leq z}p_{X}(x)p_{Y}(y)dxdy$$<br>$$&#x3D;\int_{-\infty}^\infty\left{ \int_{-\infty}^{(z-y)}p_{X}(x)dx \right}p_{Y}(y)dy $$<br>$$&#x3D;\int_{-\infty}^\infty \int_{-\infty}^zp_{X}(t-y)p_{Y}(y)dtdy$$<br>$$&#x3D;\int_{-\infty}^z\left( \int_{-\infty}^\infty p_{X}(t-y)p_{Y}(y)dy \right)dt$$<br>由此可得$Z$的密度函数<br>$$p_{Z}(z)&#x3D;\int_{-\infty}^\infty p_{X}(z-y)p_{Y}(y)dy$$</p>
+<p>[!Success]证明<br>$$F_{Z}(z)&#x3D;P(X+Y\leq z)&#x3D;\iint_{x+y\leq z}p_{X}(x)p_{Y}(y)dxdy$$<br>$$&#x3D;\int_{-\infty}^\infty{ \int_{-\infty}^{(z-y)}p_{X}(x)dx}p_{Y}(y)dy $$<br>$$&#x3D;\int_{-\infty}^\infty \int_{-\infty}^zp_{X}(t-y)p_{Y}(y)dtdy$$<br>$$&#x3D;\int_{-\infty}^z\left( \int_{-\infty}^\infty p_{X}(t-y)p_{Y}(y)dy \right)dt$$<br>由此可得$Z$的密度函数<br>$$p_{Z}(z)&#x3D;\int_{-\infty}^\infty p_{X}(z-y)p_{Y}(y)dy$$</p>
 </blockquote>
 
         </div>
